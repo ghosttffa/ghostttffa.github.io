@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Отправка на сервер</title>
+ </head>
+ <body>
+ <script>
+    function calc()
+    {
+       S = parseFloat(document.f.S.value);
+       R = parseFloat(document.f.R.value);
+       K = parseFloat(document.f.K.value);
+
+       if (S-K>R)
+         f.res.value= "Можно";
+       if (S-K<=R)
+         f.res.value= "Нельзя";
+    }
+    </script>
+
+    <h3> Решение алгоритмической задачи и отправка на сервер </h3>
+
+  <form name="f" action="http://foo.com" method="get">
+      <p> Условие задачи <input type="text" name="T" value=" Можно ли в квадратном зале площадью S поместить круглую сцену радиусом R так, чтобы от стены до сцены был проход не менее K? "> </p>
+      <p> Площадь зала <input type="text" name="S" value=""> </p>
+      <p> Радиус сцены <input type="text" name="R" value=""> </p>
+      <p> Ширина прохода <input type="text" name="K" value=""> </p>
+
+      <input type=button value="Рассчитать" onclick=calc()>
+
+      <p> Ответ <input type="text" name="res" value=""> </p>
+
+      <div>
+        <button>Отправить</button>
+      </div>
+  </form>
+ </body>
+</html>
