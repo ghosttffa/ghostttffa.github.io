@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Задачка 1004</title>
+</head>
+<body>
+    <script>
+    function calc()
+    {
+       S = parseFloat(document.f.S.value);
+       R = parseFloat(document.f.R.value);
+       K = parseFloat(document.f.K.value);
+
+       if (S-K>R)
+         f.res.value= "Можно";
+       if (S-K<=R)
+         f.res.value= "Нельзя";
+    }
+    </script>
+    <h3> Можно ли в квадратном зале площадью S поместить круглую сцену радиусом R так, чтобы от стены до сцены был проход не менее K? </h3>
+
+    <form name="f">
+    <p> Площадь зала <input type="text" name="S" value=""> </p>
+    <p> Радиус сцены <input type="text" name="R" value=""> </p>
+    <p> Ширина прохода <input type="text" name="K" value=""> </p>
+
+    <input type=button value="Рассчитать" onclick=calc()>
+
+    <p> Ответ <input type="text" name="res" value=""> </p>
+
+    </form>
+</body>
+</html>
